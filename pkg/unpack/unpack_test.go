@@ -53,11 +53,11 @@ func TestString(t *testing.T) {
 	for _, tc := range testCases {
 		act, err := unpack.String(tc.input)
 		if (err != nil) != tc.err {
-			t.Errorf("unpackString(%q) error: %v, expected error: %v", tc.input, err, tc.err)
+			t.Errorf("String(%q) error: %v, expected error: %v", tc.input, err, tc.err)
 			continue
 		}
 		if act != tc.expected {
-			t.Errorf("unpackString(%q) = %q, want %q", tc.input, act, tc.expected)
+			t.Errorf("String(%q) = %q, want %q", tc.input, act, tc.expected)
 		}
 	}
 }
